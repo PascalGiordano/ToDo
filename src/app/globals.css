@@ -1,0 +1,115 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Light Theme - TaskFlow PRD Palette */
+    --background: 0 0% 96%; /* #F5F5F5 Very light grey */
+    --foreground: 220 15% 20%; /* Dark Cool Grey, for contrast and harmony with Indigo */
+    
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 15% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+    
+    --primary: 231 59% 48%; /* #3F51B5 Deep Indigo */
+    --primary-foreground: 0 0% 100%; /* White */
+    
+    --secondary: 230 50% 90%; /* Lighter shade of Indigo/Blue */
+    --secondary-foreground: 231 59% 38%; /* Darker Indigo for text */
+    
+    --muted: 230 50% 95%; /* Even lighter Indigo/Blue-Gray */
+    --muted-foreground: 220 10% 45%; /* Softer muted grey text */
+    
+    --accent: 340 82% 52%; /* #E91E63 Vibrant Magenta */
+    --accent-foreground: 0 0% 100%; /* White */
+    
+    --destructive: 0 70% 50%; /* Standard Destructive Red */
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 230 30% 85%; /* Light blue-grey border */
+    --input: 0 0% 93%; /* Light gray for input background (was 230 30% 92%) - more neutral like globals.css initial */
+    --ring: 231 59% 48%; /* Primary color for rings */
+    
+    --chart-1: 231 59% 55%;
+    --chart-2: 340 82% 60%;
+    --chart-3: 190 70% 45%;
+    --chart-4: 30 80% 55%;
+    --chart-5: 260 60% 65%;
+    
+    --radius: 0.5rem;
+
+    /* Sidebar Specific (Light) */
+    --sidebar-background: 0 0% 94%; /* Slightly darker than main bg #F0F0F0 */
+    --sidebar-foreground: 220 15% 20%;
+    --sidebar-primary: 231 59% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 50% 88%; /* Lighter hover for sidebar items */
+    --sidebar-accent-foreground: 231 59% 38%;
+    --sidebar-border: 230 30% 80%;
+    --sidebar-ring: 231 59% 48%;
+  }
+
+  .dark {
+    /* Dark Theme - TaskFlow PRD Palette Adapted */
+    --background: 230 15% 12%; /* Very Dark Desaturated Blue */
+    --foreground: 0 0% 95%; /* Almost White */
+    
+    --card: 230 15% 17%; /* Slightly lighter dark blue than background */
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 230 15% 12%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 231 70% 65%; /* Brighter Indigo for dark mode */
+    --primary-foreground: 230 15% 10%; /* Dark, for contrast on brighter Indigo */
+    
+    --secondary: 230 15% 22%; /* Darker Indigo/Blue shade */
+    --secondary-foreground: 0 0% 85%; /* Light grey for text */
+    
+    --muted: 230 15% 27%; /* Even darker/more muted Indigo/Blue */
+    --muted-foreground: 0 0% 60%; /* Softer light grey text */
+    
+    --accent: 340 90% 70%; /* Brighter Magenta for dark mode */
+    --accent-foreground: 230 15% 5%; /* Very dark, for contrast */
+    
+    --destructive: 0 70% 60%; /* Brighter Red for dark mode */
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 230 10% 35%; /* Dark blue-grey border */
+    --input: 230 10% 28%; /* Dark input background */
+    --ring: 231 70% 65%; /* Primary color for rings in dark mode */
+
+    --chart-1: 231 70% 70%;
+    --chart-2: 340 90% 75%;
+    --chart-3: 190 70% 55%;
+    --chart-4: 30 80% 65%;
+    --chart-5: 260 60% 70%;
+
+    /* Sidebar Specific (Dark) */
+    --sidebar-background: 230 15% 10%; /* Slightly different dark */
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 231 70% 65%;
+    --sidebar-primary-foreground: 230 15% 10%;
+    --sidebar-accent: 230 15% 25%; /* Hover accent for sidebar items */
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 230 10% 20%;
+    --sidebar-ring: 231 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
